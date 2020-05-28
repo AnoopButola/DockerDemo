@@ -5,5 +5,11 @@
 2)docker images : list all images
 3)docker run --name : assign name to the container
 4)docker run --name container1 -d redis  : run container with name as container1 and will run in detach mode 
-  wherein container will be started in bg.
-5)
+  wherein container will be started in bg and container id will be printed.
+5)docker ps : to list all container . default shows only running containers.
+6)docker ps -a : to show all conatainers.
+7)docker kill containerid : will stop/kill the container but wont delete it.
+8)docker restart containerid: will start container again.
+9)docker rm containerid: will delete container permanently
+9)docker rm -f containerid: forcefully remove docker container.
+10)
