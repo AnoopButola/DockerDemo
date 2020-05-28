@@ -1,0 +1,9 @@
+#used to play with redis image
+
+#Basic commands used
+1)docker pull redis:to pull image from docker
+2)docker images : list all images
+3)docker run --name : assign name to the container
+4)docker run --name container1 -d redis  : run container with name as container1 and will run in detach mode 
+  wherein container will be started in bg.
+5)
