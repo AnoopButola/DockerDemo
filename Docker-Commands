@@ -12,4 +12,8 @@
 8)docker restart containerid: will start container again.
 9)docker rm containerid: will delete container permanently
 9)docker rm -f containerid: forcefully remove docker container.
-10)
+10)docker exec -it containerId sh : to execute the image inside container.
+    redis cli can be opened in bash by firing :
+     10.a)redis-cli
+     10.b)127.0.0.1:6379>   will be available after this.
+11)do ping on redi-cli it server will send Pong as response.
