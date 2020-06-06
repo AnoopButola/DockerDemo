@@ -17,3 +17,8 @@
      10.a)redis-cli
      10.b)127.0.0.1:6379>   will be available after this.
 11)do ping on redi-cli it server will send Pong as response.
+12)Use belowcommand to use docker using redis if want to change some default config using redis.conf.Make sure the sequence is very important else can get issues like can't open config using p.
+
+docker run -d -p 6379:6379 -v /c/Users/HP/Build-Folder-Anoop/redis.conf:/usr/local/etc/redis/redis.conf  redis redis-server /usr/local/etc/redis/redis.conf
+
+13)
