@@ -5,14 +5,14 @@
 2)docker images : list all images
 3)docker run --name : assign name to the container and run will also create new container.
 4)docker run --name container1 -d redis  : run container with name as container1 and will run in detach mode 
-  wherein container will be started in bg and container id will be printed.
+  wherein container will be created and started in bg and container id will be printed.
 5)docker ps : to list all container . default shows only running containers.
 6)docker ps -a : to show all conatainers.
 7)docker kill containerid : will stop/kill the container but wont delete it.
 8)docker restart containerid: will start container again.
 9)docker rm containerid: will delete container permanently
 9)docker rm -f containerid: forcefully remove docker container.
-10)docker exec -it containerId sh : to execute the image inside running container.
+10)docker exec -it containerId sh : open running container and open its bash.
     redis cli can be opened in bash by firing :
      10.a)redis-cli
      10.b)127.0.0.1:6379>   will be available after this.
