@@ -21,4 +21,4 @@
 
 docker run -d -p 6379:6379 -v /c/Users/HP/Build-Folder-Anoop/redis.conf:/usr/local/etc/redis/redis.conf  redis redis-server /usr/local/etc/redis/redis.conf
 
-13)
+13)docker exec -it 2f010d978404c781c24f82d260734c1a3913b63b9038f61c0da58e76ec1dff6f /bin/sh :: will exeute image in conatiner and move user to shell.
