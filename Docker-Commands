@@ -1,0 +1,24 @@
+#used to play with redis image
+
+#Basic commands used
+1)docker pull redis:to pull image from docker
+2)docker images : list all images
+3)docker run --name : assign name to the container and run will also create new container.
+4)docker run --name container1 -d redis  : run container with name as container1 and will run in detach mode 
+  wherein container will be created and started in bg and container id will be printed.
+5)docker ps : to list all container . default shows only running containers.
+6)docker ps -a : to show all conatainers.
+7)docker kill containerid : will stop/kill the container but wont delete it.
+8)docker restart containerid: will start container again.
+9)docker rm containerid: will delete container permanently
+9)docker rm -f containerid: forcefully remove docker container.
+10)docker exec -it containerId sh : open running container and open its bash.
+    redis cli can be opened in bash by firing :
+     10.a)redis-cli
+     10.b)127.0.0.1:6379>   will be available after this.
+11)do ping on redi-cli it server will send Pong as response.
+12)Use belowcommand to use docker using redis if want to change some default config using redis.conf.Make sure the sequence is very important else can get issues like can't open config using p.
+
+docker run -d -p 6379:6379 -v /c/Users/HP/Build-Folder-Anoop/redis.conf:/usr/local/etc/redis/redis.conf  redis redis-server /usr/local/etc/redis/redis.conf
+
+13)docker exec -it 2f010d978404c781c24f82d260734c1a3913b63b9038f61c0da58e76ec1dff6f /bin/sh :: will exeute image in conatiner and move user to shell.
