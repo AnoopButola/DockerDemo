@@ -22,3 +22,99 @@
 docker run -d -p 6379:6379 -v /c/Users/HP/Build-Folder-Anoop/redis.conf:/usr/local/etc/redis/redis.conf  redis redis-server /usr/local/etc/redis/redis.conf
 
 13)docker exec -it 2f010d978404c781c24f82d260734c1a3913b63b9038f61c0da58e76ec1dff6f /bin/sh :: will exeute image in conatiner and move user to shell.
+
+
+
+
+
+Docker commands:;
+
+1)docker ps -a: to list all containers
+
+2)docker ps -aq: to list container in quite mode means it wil show container ids only.
+
+3)docker ps  : list ony running containers
+
+4)docker images : list images
+
+5)docker images -a
+
+6)docker images -aq : it will show images in quite mode means only image ids.
+
+7)docker rm -v $(docker ps -a -q) : remove all containers
+
+   -v: Remove all associated volumes
+   -f: Forces the removal. Like, if any containers is running, you need -f to remove them.
+
+8)docker rmi -f $(docker images -a -q) : remove all 
+   -a: for all containers, even not running, (or images)
+   -q: to remove all the details other than the ID of containers (or images)
+
+
+9)docker login -u 'user'  -p 'password' registryURL
+
+10)docker image pull registry.iad.rsi.racksppace.net/dcs-api-cicd/api:staging  :: pull image from registry
+
+
+11)docker containerid exec -it /bin/bash : get container session
+
+12)docker kill containerId :: to kill running container.
+
+13)docker exec -it conatinerName/containerId /bin/bash
+       or
+   docker exec -it conatinerName/containerId /bin/sh
+
+14)docker run --name  conatinername
+
+
+
+
+
+
+
+
+
+Openshift commands::
+
+1)oc login clusterURL -u username -p password
+
+2)oc projects : list all projects
+
+3)oc project : get current project/namepsace
+
+4)oc get is -n dcs-api-cicd
+
+5)oc  get pods 
+
+6)oc rsh podId
+
+7)oc cp dcs-api-cicd/podId:/var/lib/jenkins/plugins .
+
+8)oc . dcs-api-cicd/podId:/var/lib/jenkins/plugins/
+
+9)oc get secrets/pwsafe-24 -n namespacename
+
+10)oc get secrets -n gdl-sdc-cicd
+
+12)oc get secrets/secret-id -n namespace -o json : will output secrets in jsonformat. O stands for output
+
+13)
+
+
+
+
+PYTHON commands::
+.................
+
+1)Python3 --version
+
+2)echo $SHELL :: if zshell  then ~/.zprofile will take preferences over others .
+
+3)pipenv install -d :: It will ceate virtualenv as well as install all dependencies.
+
+4)pipenv --rm :: to delete virtaulenv created 
+
+5)pipenv shell:: to enter virtualenv shell.
+
+6)pytest 
+
