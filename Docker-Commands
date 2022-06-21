@@ -53,7 +53,7 @@ Docker commands:;
 
 9)docker login -u 'user'  -p 'password' registryURL
 
-10)docker image pull registry.iad.rsi.racksppace.net/dcs-api-cicd/api:staging  :: pull image from registry
+10)docker image pull registry/api:staging  :: pull image from registry
 
 
 11)docker containerid exec -it /bin/bash : get container session
@@ -82,17 +82,17 @@ Openshift commands::
 
 3)oc project : get current project/namepsace
 
-4)oc get is -n dcs-api-cicd
+4)oc get is -n api
 
 5)oc  get pods 
 
 6)oc rsh podId
 
-7)oc cp dcs-api-cicd/podId:/var/lib/jenkins/plugins .
+7)oc cp api/podId:/var/lib/jenkins/plugins .
 
-8)oc . dcs-api-cicd/podId:/var/lib/jenkins/plugins/
+8)oc . api/podId:/var/lib/jenkins/plugins/
 
-9)oc get secrets/pwsafe-24 -n namespacename
+9)oc get secrets/secrename -n namespacename
 
 10)oc get secrets -n gdl-sdc-cicd
 
