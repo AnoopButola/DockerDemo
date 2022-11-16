@@ -1,0 +1,9 @@
+Using elastic search image::
+
+1)docker pull elasticsearch:1.7.0
+
+2)docker images
+
+3)docker run -it -p 9200:9200 -p 9300:9300 elasticsearch:1.7.0
+
+
