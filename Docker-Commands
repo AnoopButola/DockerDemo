@@ -66,6 +66,8 @@ Docker commands:;
 
 14)docker run --name  conatinername
 
+15)docker ps --no-trunc : will display untruncated response.
+
 
 
 
